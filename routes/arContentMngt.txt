@@ -1,0 +1,69 @@
+// ------------------------ AR Content Management Routes -------------------------
+
+// Render AR Management Page
+router.get('/ar-management', authenticateToken, async (req, res) => {
+  try {
+    // Fetch admin details
+    const admin = await Admin.findById(req.admin.id).select('-password');
+
+    // Fetch AR models from the database
+    const arModels = await ARModel.find();
+
+    // Render the AR management page
+    res.render('ar-management', { admin, arModels });
+  } catch (error) {
+    console.error('Error rendering AR management page:', error);
+    res.status(500).send('Server error');
+  }
+});
+
+// Add New AR Model
+router.post('/ar-management/add', authenticateToken, upload.single('modelFile'), async (req, res) => {
+  const { name, description, category } = req.body;
+
+  try {
+    // Check if a file was uploaded
+    const modelURL = req.file ? '/uploads/' + req.file.filename : null;
+    if (!modelURL) {
+      return res.status(400).send('No model file uploaded');
+    }
+
+    // Save the new AR model to the database
+    const newARModel = new ARModel({ name, description, category, modelURL });
+    await newARModel.save();
+
+    res.redirect('/ar-management');
+  } catch (error) {
+    console.error('Error adding AR model:', error);
+    res.status(500).send('Server error');
+  }
+});
+
+// Edit AR Model
+router.post('/ar-management/:id/edit', authenticateToken, async (req, res) => {
+  const { name, description, category } = req.body;
+
+  try {
+    // Update AR model details
+    const updatedFields = { name, description, category };
+    await ARModel.findByIdAndUpdate(req.params.id, updatedFields, { new: true });
+
+    res.redirect('/ar-management');
+  } catch (error) {
+    console.error('Error editing AR model:', error);
+    res.status(500).send('Server error');
+  }
+});
+
+// Delete AR Model
+router.get('/ar-management/:id/delete', authenticateToken, async (req, res) => {
+  try {
+    // Delete the AR model from the database
+    await ARModel.findByIdAndDelete(req.params.id);
+
+    res.redirect('/ar-management');
+  } catch (error) {
+    console.error('Error deleting AR model:', error);
+    res.status(500).send('Server error');
+  }
+});

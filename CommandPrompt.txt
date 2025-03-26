@@ -1,0 +1,5 @@
+netstat -ano | findstr :3000
+
+TCP    0.0.0.0:3000      0.0.0.0:0       LISTENING       <PID>
+
+taskkill /F /PID <PID>

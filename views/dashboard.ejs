@@ -1,0 +1,340 @@
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html">
+          <img src="images/logo.png" class="mr-2" alt="logo" />
+        </a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">
+          <img src="images/logo.png" alt="logo" />
+        </a>
+      </div>      
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+      </div>
+    </nav>
+    
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <div class="theme-setting-wrapper">
+  </div>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #343a40; color: #ffffff; padding-right: 0px;">
+  <ul class="nav" style="padding: 0;">
+    <!-- Dashboard -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/dashboard" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="icon-grid menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Dashboard</span>
+      </a>
+    </li>
+    
+    <!-- Restaurant Management -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/restaurant-management" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-home menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Restaurants</span>
+      </a>
+    </li>
+
+    <!-- Menu Management -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/menu-management" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-menu-alt menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Menu Management</span>
+      </a>
+    </li>
+    
+    <!-- Categories Management -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/categories" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-layers-alt menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Categories</span>
+      </a>
+    </li>
+
+    <!-- Reports and Analytics -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" data-toggle="collapse" href="#reports-analytics" aria-expanded="false" aria-controls="reports-analytics" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-bar-chart menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Analytics</span>
+        <i class="ti-angle-down menu-arrow" style="margin-left: auto; font-size: 1rem; color: #ffffff;"></i>
+      </a>
+      <div class="collapse" id="reports-analytics">
+        <ul class="nav flex-column sub-menu" style="background-color: #212529; border-radius: 5px; padding-left: 20px;">
+          <li class="nav-item" style="margin-bottom: 10px; list-style: none;">
+            <a class="nav-link" href="/reports/sales" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Sales Reports</a>
+          </li>
+          <li class="nav-item" style="margin-bottom: 10px; list-style: none;">
+            <a class="nav-link" href="/reports/performance" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Performance Metrics</a>
+          </li>
+          <li class="nav-item" style="list-style: none;">
+            <a class="nav-link" href="/reports/customers" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Customer Insights</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+        <!-- Profile -->
+        <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+          <a class="nav-link" href="/profile" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+            <i class="ti-user menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+            <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Profile</span>
+          </a>
+        </li>
+  </ul>
+</nav>
+  
+<main class="main-content" style="min-height: 100vh; background-color: #f5f7fa; padding: 20px;">
+  <div class="container" style="max-width: 1200px; background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+    
+    <!-- Page Header -->
+    <div class="page-header" style="text-align: center; margin-bottom: 40px;">
+      <h1 style="font-size: 2.5rem; font-weight: bold; color: #333;">AR Menu Staff Dashboard</h1>
+      <p style="font-size: 1.2rem; color: #777;">Overview of app operations and tasks</p>
+    </div>
+
+    <!-- Widgets Section -->
+    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+
+      <!-- Total Menu Items -->
+      <div
+        class="card bg-primary text-white"
+        style="border-radius: 10px; flex: 1; min-width: 220px; max-width: 280px; padding: 20px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s;"
+        onclick="location.href='/menu-items'"
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5>Total Menu Items</h5>
+            <i class="icon-layers menu-icon" style="font-size: 1.5rem;"></i>
+          </div>
+          <h2 style="margin-top: 10px; font-size: 2rem;"><%= totalMenuItems %></h2>
+          <p class="mt-2 mb-0" style="font-size: 0.9rem;"><small>Click to view categorized list</small></p>
+        </div>
+      </div>
+
+      <!-- 3D Models Added Widget -->
+      <div
+        class="card bg-success text-white"
+        style="border-radius: 10px; flex: 1; min-width: 220px; max-width: 280px; padding: 20px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s;"
+        onclick="window.location.href='/menu-items-with-3d';"
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5>3D Models Added</h5>
+            <i class="icon-cube menu-icon" style="font-size: 1.5rem;"></i>
+          </div>
+          <h2 style="margin-top: 10px; font-size: 2rem;"><%= total3DModels %></h2>
+          <p class="mt-2 mb-0" style="font-size: 0.9rem;"><small>Uploaded and live</small></p>
+        </div>
+      </div>
+
+      <!-- Pending 3D Models Widget -->
+      <div
+        class="card bg-warning text-white"
+        style="border-radius: 10px; flex: 1; min-width: 220px; max-width: 280px; padding: 20px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s;"
+        onclick="window.location.href='/menu-items-pending-3d';"
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5>Pending 3D Models</h5>
+            <i class="icon-hourglass menu-icon" style="font-size: 1.5rem;"></i>
+          </div>
+          <h2 style="margin-top: 10px; font-size: 2rem;"><%= pending3DModels %></h2>
+          <p class="mt-2 mb-0" style="font-size: 0.9rem;"><small>Awaiting upload or review</small></p>
+        </div>
+      </div>
+
+      <!-- Restaurants Onboarded -->
+      <div
+        class="card bg-info text-white"
+        style="border-radius: 10px; flex: 1; min-width: 220px; max-width: 280px; padding: 20px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s;"
+        onclick="window.location.href='/restaurant-management';"
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5>Restaurants Onboarded</h5>
+            <i class="icon-home menu-icon" style="font-size: 1.5rem;"></i>
+          </div>
+          <h2 style="margin-top: 10px; font-size: 2rem;"><%= restaurantsOnboarded %></h2>
+          <p class="mt-2 mb-0" style="font-size: 0.9rem;"><small>Currently active</small></p>
+        </div>
+      </div>
+
+
+    <!-- Graphs Section -->
+    <div class="row">
+      <!-- Recent Notifications -->
+      <div class="col-xl-8 col-lg-8 col-md-12" style="padding-right: 15px;">
+        <div class="card" style="border-radius: 10px; padding: 20px; height: 300px;">
+          <div class="card-body">
+            <h4 class="card-title">Recent Notifications</h4>
+            <ul id="recent-notifications"
+                style="
+                  list-style: none;
+                  padding: 0;
+                  margin-top: 20px;
+                  max-height: 250px;
+                  overflow-y: auto; /* Enables scrolling inside the notifications */
+                  overflow-x: hidden; /* Prevents horizontal scrolling */
+                  scrollbar-width: none; /* Hides the scrollbar (Firefox) */
+                  -ms-overflow-style: none; /* Hides the scrollbar (IE 10+) */
+                ">
+              <% recentNotifications.forEach(notification => { %>
+                <li
+                  style="
+                    padding: 10px;
+                    background: #f9f9f9;
+                    border-radius: 8px;
+                    margin-bottom: 10px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                  ">
+                  <strong><%= notification.type %>:</strong> <%= notification.message %>
+                  <p style="margin: 5px 0 0; font-size: 0.85rem; color: #666;">
+                    <%= notification.createdAt.toLocaleString() %>
+                  </p>
+                </li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Top Pending Restaurants -->
+      <div class="col-xl-4 col-lg-12 col-md-12 grid-margin stretch-card">
+        <div class="card" style="border-radius: 10px; padding: 20px; max-height: 300px; overflow-y: auto;">
+          <div class="card-body">
+            <h4 class="card-title">Top Pending Restaurants</h4>
+            <ul id="pending-restaurants-list" style="list-style: none; padding: 0; margin-top: 20px;">
+              <!-- Restaurants will load here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</main>
+
+                
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/top-pending-restaurants')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          const pendingRestaurantsList = document.getElementById('pending-restaurants-list');
+          pendingRestaurantsList.innerHTML = ''; // Clear existing list
+  
+          if (data.length === 0) {
+            pendingRestaurantsList.innerHTML = '<li style="padding: 10px; text-align: center; color: #666;">No pending restaurants</li>';
+          } else {
+            data.forEach(restaurant => {
+              const li = document.createElement('li');
+              li.style.cssText = `
+                padding: 10px;
+                background: #f9f9f9;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              `;
+              li.textContent = `${restaurant.name} (${restaurant.menuCount} menu items)`;
+              pendingRestaurantsList.appendChild(li);
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching pending restaurants:', error);
+          const pendingRestaurantsList = document.getElementById('pending-restaurants-list');
+          pendingRestaurantsList.innerHTML = '<li style="padding: 10px; text-align: center; color: #666;">Failed to load restaurants</li>';
+        });
+    });
+  </script>
+  
+</body>
+
+</html>

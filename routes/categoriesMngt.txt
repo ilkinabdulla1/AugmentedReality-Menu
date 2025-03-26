@@ -1,0 +1,41 @@
+// ------------------------  Categories Management Routes -------------------------
+// Render Category Management Page
+router.get('/categories', authenticateToken, async (req, res) => {
+  try {
+    const categories = await Category.find(); // Fetch categories from DB
+    res.render('categories', {
+      admin: req.admin, // Pass admin details if available
+      categories, // Pass categories to the view
+    });
+  } catch (error) {
+    console.error('Error fetching categories:', error);
+    res.status(500).send('Server error');
+  }
+});
+
+
+// Add New Category
+router.post('/categories/add', async (req, res) => {
+  const { name } = req.body;
+
+  try {
+    const newCategory = new Category({ name });
+    await newCategory.save();
+    res.redirect('/categories');
+  } catch (error) {
+    console.error('Error adding category:', error);
+    res.status(500).send('Server error');
+  }
+});
+
+// Delete Category
+router.get('/categories/:id/delete', async (req, res) => {
+  try {
+    await Category.findByIdAndDelete(req.params.id);
+    res.redirect('/categories');
+  } catch (error) {
+    console.error('Error deleting category:', error);
+    res.status(500).send('Server error');
+  }
+});
+

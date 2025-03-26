@@ -1,0 +1,242 @@
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/vendors/feather/feather.css">
+  <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="/js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo mr-5" href="index.html">
+            <img src="images/logo.png" class="mr-2" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">
+            <img src="images/logo.png" alt="logo" />
+          </a>
+        </div>      
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        </div>
+      </nav>
+      
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+        </div>
+  
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #343a40; color: #ffffff; padding-right: 0px;">
+    <ul class="nav" style="padding: 0;">
+      <!-- Dashboard -->
+      <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+        <a class="nav-link" href="/dashboard" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+          <i class="icon-grid menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+          <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Dashboard</span>
+        </a>
+      </li>
+      
+      <!-- Restaurant Management -->
+      <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+        <a class="nav-link" href="/restaurant-management" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+          <i class="ti-home menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+          <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Restaurants</span>
+        </a>
+      </li>
+  
+      <!-- Menu Management -->
+      <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+        <a class="nav-link" href="/menu-management" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+          <i class="ti-menu-alt menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+          <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Menu Management</span>
+        </a>
+      </li>
+      
+      <!-- Categories Management -->
+      <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+        <a class="nav-link" href="/categories" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+          <i class="ti-layers-alt menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+          <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Categories</span>
+        </a>
+      </li>
+  
+      <!-- Reports and Analytics -->
+      <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+        <a class="nav-link" data-toggle="collapse" href="#reports-analytics" aria-expanded="false" aria-controls="reports-analytics" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+          <i class="ti-bar-chart menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+          <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Analytics</span>
+          <i class="ti-angle-down menu-arrow" style="margin-left: auto; font-size: 1rem; color: #ffffff;"></i>
+        </a>
+        <div class="collapse" id="reports-analytics">
+          <ul class="nav flex-column sub-menu" style="background-color: #212529; border-radius: 5px; padding-left: 20px;">
+            <li class="nav-item" style="margin-bottom: 10px; list-style: none;">
+              <a class="nav-link" href="/reports/sales" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Sales Reports</a>
+            </li>
+            <li class="nav-item" style="margin-bottom: 10px; list-style: none;">
+              <a class="nav-link" href="/reports/performance" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Performance Metrics</a>
+            </li>
+            <li class="nav-item" style="list-style: none;">
+              <a class="nav-link" href="/reports/customers" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Customer Insights</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+  
+          <!-- Profile -->
+          <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+            <a class="nav-link" href="/profile" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+              <i class="ti-user menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+              <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Profile</span>
+            </a>
+          </li>
+    </ul>
+  </nav>
+
+  <main class="main-content" style="min-height: 100vh; background-color: #f5f7fa; padding: 20px;">
+    <div class="container" style="max-width: 800px; background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+      <!-- Page Header -->
+      <div class="page-header" style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-size: 2.5rem; font-weight: bold; color: #333;">Edit Menu Item</h1>
+        <p style="font-size: 1.2rem; color: #777;">Modify the details of your menu item below.</p>
+      </div>
+  
+      <!-- Edit Menu Item Form -->
+      <section class="edit-menu-item">
+        <form
+          action="/menu-management/<%= menuItem._id %>/update"
+          method="POST"
+          enctype="multipart/form-data"
+          style="background: #f9f9f9; padding: 30px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);"
+        >
+          <!-- Menu Item Name -->
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label for="name" style="font-weight: bold; font-size: 1.2rem;">Menu Item Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              value="<%= menuItem.name %>"
+              required
+              style="padding: 15px; border-radius: 10px; border: 1px solid #ddd; font-size: 1rem;"
+            />
+          </div>
+  
+          <!-- Category -->
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label for="category" style="font-weight: bold; font-size: 1.2rem;">Category</label>
+            <select
+              id="category"
+              name="category"
+              class="form-control"
+              required
+              style="padding: 15px; border-radius: 10px; border: 1px solid #ddd; font-size: 1rem;"
+            >
+              <% categories.forEach(category => { %>
+                <option
+                  value="<%= category._id %>"
+                  <%= menuItem.category && menuItem.category._id.equals(category._id) ? 'selected' : '' %>
+                >
+                  <%= category.name %>
+                </option>
+              <% }) %>
+            </select>
+          </div>
+  
+          <!-- Price -->
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label for="price" style="font-weight: bold; font-size: 1.2rem;">Price</label>
+            <input
+              type="number"
+              id="price"
+              name="price"
+              class="form-control"
+              value="<%= menuItem.price %>"
+              step="0.01"
+              required
+              style="padding: 15px; border-radius: 10px; border: 1px solid #ddd; font-size: 1rem;"
+            />
+          </div>
+  
+          <!-- Image Upload -->
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label for="imagePath" style="font-weight: bold; font-size: 1.2rem;">Upload New Image</label>
+            <input
+              type="file"
+              id="imagePath"
+              name="imagePath"
+              class="form-control-file"
+              style="margin-top: 10px;"
+            />
+            <% if (menuItem.imagePath) { %>
+              <p style="margin-top: 15px; font-size: 1rem;">Current Image:</p>
+              <img
+                src="<%= menuItem.imagePath %>"
+                alt="<%= menuItem.name %>"
+                style="width: 100px; height: 100px; object-fit: cover; border-radius: 10px; border: 1px solid #ddd;"
+              />
+            <% } %>
+          </div>
+  
+          <!-- 3D Model Upload -->
+          <div class="form-group" style="margin-bottom: 25px;">
+            <label for="threeDFile" style="font-weight: bold; font-size: 1.2rem;">Upload 3D Model</label>
+            <input
+              type="file"
+              id="threeDFile"
+              name="threeDFile"
+              class="form-control-file"
+              style="margin-top: 10px;"
+            />
+            <% if (menuItem.threeDFilePath) { %>
+              <p style="margin-top: 15px; font-size: 1rem;">
+                Current 3D Model: 
+                <a
+                  href="<%= menuItem.threeDFilePath %>"
+                  target="_blank"
+                  style="color: #007bff; text-decoration: underline; font-weight: bold;"
+                >
+                  View/Download
+                </a>
+              </p>
+            <% } %>
+          </div>
+  
+          <!-- Submit Button -->
+          <div style="text-align: center;">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="background-color: #4CAF50; border: none; padding: 12px 25px; font-size: 1rem; border-radius: 10px; color: #fff; font-weight: bold; transition: background-color 0.3s ease;"
+              onmouseover="this.style.backgroundColor='#45a049';"
+              onmouseout="this.style.backgroundColor='#4CAF50';"
+            >
+              Save Changes
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+  

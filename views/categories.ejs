@@ -1,0 +1,208 @@
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html">
+          <img src="images/logo.png" class="mr-2" alt="logo" />
+        </a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">
+          <img src="images/logo.png" alt="logo" />
+        </a>
+      </div>      
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+      </div>
+    </nav>
+    
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+      </div>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #343a40; color: #ffffff; padding-right: 0px;">
+  <ul class="nav" style="padding: 0;">
+    <!-- Dashboard -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/dashboard" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="icon-grid menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Dashboard</span>
+      </a>
+    </li>
+    
+    <!-- Restaurant Management -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/restaurant-management" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-home menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Restaurants</span>
+      </a>
+    </li>
+
+    <!-- Menu Management -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/menu-management" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-menu-alt menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Menu Management</span>
+      </a>
+    </li>
+    
+    <!-- Categories Management -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" href="/categories" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-layers-alt menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Categories</span>
+      </a>
+    </li>
+
+    <!-- Reports and Analytics -->
+    <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+      <a class="nav-link" data-toggle="collapse" href="#reports-analytics" aria-expanded="false" aria-controls="reports-analytics" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+        <i class="ti-bar-chart menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+        <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Analytics</span>
+        <i class="ti-angle-down menu-arrow" style="margin-left: auto; font-size: 1rem; color: #ffffff;"></i>
+      </a>
+      <div class="collapse" id="reports-analytics">
+        <ul class="nav flex-column sub-menu" style="background-color: #212529; border-radius: 5px; padding-left: 20px;">
+          <li class="nav-item" style="margin-bottom: 10px; list-style: none;">
+            <a class="nav-link" href="/reports/sales" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Sales Reports</a>
+          </li>
+          <li class="nav-item" style="margin-bottom: 10px; list-style: none;">
+            <a class="nav-link" href="/reports/performance" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Performance Metrics</a>
+          </li>
+          <li class="nav-item" style="list-style: none;">
+            <a class="nav-link" href="/reports/customers" style="color: #ffffff; text-decoration: none; font-size: 0.95rem;">Customer Insights</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+        <!-- Profile -->
+        <li class="nav-item" style="margin-bottom: 15px; list-style: none;">
+          <a class="nav-link" href="/profile" style="display: flex; align-items: center; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+            <i class="ti-user menu-icon" style="font-size: 1.4rem; color: #ffffff; margin-right: 15px;"></i>
+            <span class="menu-title" style="font-size: 1.0rem; font-weight: bold; white-space: nowrap;">Profile</span>
+          </a>
+        </li>
+  </ul>
+</nav>
+
+
+<main class="main-content" style="display: flex; align-items: center; justify-content: flex-end; min-height: 100vh; background-color: #f9f9f9;">
+  <div class="container" style="max-width: 1200px; background: #ffffff; padding: 40px 50px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-right: 20px;">
+    <!-- Page Header -->
+    <div class="page-header" style="text-align: center; margin-bottom: 30px;">
+      <h1 style="font-size: 2.5rem; font-weight: bold; color: #4A4A4A;">Category Management</h1>
+    </div>
+
+    <!-- Add New Category Section -->
+    <section class="add-category" style="margin-bottom: 40px;">
+      <h2 style="font-size: 1.8rem; font-weight: bold; color: #4A4A4A; text-align: center; margin-bottom: 20px;">Add New Category</h2>
+      <form action="/categories/add" method="POST" style="margin-bottom: 20px;">
+        <!-- Input for Category Name -->
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="name" style="font-weight: bold; font-size: 1.1rem;">Category Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Category Name"
+            required
+            style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center;">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="background-color: #4CAF50; border: none; padding: 12px 24px; font-size: 1rem; border-radius: 8px; color: #fff; transition: background-color 0.3s ease;"
+            onmouseover="this.style.backgroundColor='#45a049';"
+            onmouseout="this.style.backgroundColor='#4CAF50';"
+          >
+            Add Category
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Existing Categories Section -->
+    <section class="categories">
+      <h2 style="font-size: 1.8rem; font-weight: bold; color: #4A4A4A; text-align: center; margin-bottom: 20px;">Existing Categories</h2>
+      <table class="table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 1rem;">
+        <thead>
+          <tr style="background-color: #f0f0f0;">
+            <th style="padding: 12px; text-align: left; font-weight: bold; border-bottom: 1px solid #ddd;">Name</th>
+            <th style="padding: 12px; text-align: left; font-weight: bold; border-bottom: 1px solid #ddd;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (categories && categories.length > 0) { %>
+            <% categories.forEach(category => { %>
+              <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;"><%= category.name %></td>
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+                  <a
+                    href="/categories/<%= category._id %>/edit"
+                    class="btn btn-sm btn-warning"
+                    style="margin-right: 10px; background-color: #FFC107; border: none; padding: 8px 12px; font-size: 0.9rem; color: #fff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;"
+                    onmouseover="this.style.backgroundColor='#e6b005';"
+                    onmouseout="this.style.backgroundColor='#FFC107';"
+                  >
+                    Edit
+                  </a>
+                  <a
+                    href="/categories/<%= category._id %>/delete"
+                    class="btn btn-sm btn-danger"
+                    style="background-color: #FF5252; border: none; padding: 8px 12px; font-size: 0.9rem; color: #fff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;"
+                    onmouseover="this.style.backgroundColor='#e04a4a';"
+                    onmouseout="this.style.backgroundColor='#FF5252';"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="2" style="padding: 20px; text-align: center; color: #999;">No categories available</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</main>
+  
+  
+</body>
+
+</html>
